@@ -1,58 +1,130 @@
-#wrapper {
+.wrapper {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    max-width: 100%;
-    max-height: 100%;
-    min-width: 50%;
+    min-width: 300px;
+} 
+
+html {
+    background-image: url("lines.jpg");
+    background-attachment: fixed;
+    background-position: center;
 }
 
-#steve {
-    display: relative;
-    align-self: center;
-    position: relative;
-    max-width: 75%;
-    min-width: 50%;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-}
-
-#tropple {
-    position: relative;
-    max-width: 25%;
-    border-radius: 5px;
-}
-
-div.text {
-    display: inline-block;
-    position: relative;
-    align-self: center;
-    justify-content: center;
-    flex-direction: column;
-    background: white;
-
+#info {
+    position: sticky;
+    top: 500px;
+    left: 70%;
+    transform: translateX(10%);
+    padding: 10px;
+    height: 100px;
+    width: 40px;
+    background: #abd123;
+    z-index: -1;
     
 }
 
+#steve {
+    align-self: center;
+    max-width: 780px;
+    border: 10px solid rgb(179, 126, 179);
+}
+
+
+.project-img {
+    align-self: center;
+    height: 180px;
+    width: auto;
+    border: 5px solid black;
+
+}
+
+#tropple:hover {
+
+}
+
+#head {
+    display: flex;
+    align-self: center;
+    max-width: 800px;
+}
+
+h1#name {
+    color: rgb(179, 126, 179);
+}
+
+div.text {
+    display: flex;
+    position: relative;
+    align-self: center;
+    max-width: 800px;
+    min-width: 800px;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+div.intro {
+    align-self: center;
+    margin: 50px;
+    padding: 10px;
+    max-width: 800px;
+    background: white;
+    border: 10px solid rgb(179, 126, 179);
+    
+}
+
+div.project {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    align-content: center;
+    justify-content: center;
+    min-width: 700px;
+}
+
+div.project tropple {
+
+}
+
+div.projects {
+    display: grid;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 10px;
+    background: white;
+    border: 10px solid rgb(179, 126, 179);
+}
+
+h2.project-title{
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+p.project-text {
+    max-width: 300px;
+    max-height: 300px;
+}
 #icon {
     padding-left: 3px;
     padding-top: 3px;
     font-family: 'Limelight', cursive;
     color: rgb(122, 93, 122);
+    align-self: flex-start;
 }
 
 h1 {
     font-family: 'Ubuntu Condensed', sans-serif;
+    align-self: center;
 }
 
 h2 {
     font-family: 'Fugaz One', cursive;
+    align-self: center;
 }
 
 p {
-    font-family: 'Neutron', serif;
-    width: 400px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    position: relative;
+    font-size: 20px;
+    max-width: 400px;
+    align-self: center;
 }
