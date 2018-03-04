@@ -1,0 +1,15 @@
+
+.stripes {
+    position: sticky;
+    top: 300px;
+    left: 70%;
+    transform: rotate(45deg);
+    
+}
+
+.stripe {
+    background-color: #353535;
+    width: 300px;
+    margin: 5px;
+    height: 3px;
+}
