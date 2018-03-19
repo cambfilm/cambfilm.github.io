@@ -6,8 +6,10 @@
 } 
 
 html {
-    background-image: url("images/lines.jpg");
+    background-image: url("images/lines-vector-3.svg");
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #steve {
@@ -24,6 +26,7 @@ html {
     align-self: center;
     max-width: 800px;
 }
+
 
 #info {
     grid-area: 1 / 8 / 11 / 11;
@@ -48,9 +51,7 @@ a {
     color: black;
 }
 
-a:hover {
-    color:  #FF5A3E;
-}
+
 
 .link {
     align-self: center;
@@ -76,13 +77,14 @@ div.intro {
     grid-area: 1 / 2 / 5 / 4;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr 1fr 5fr;
+    grid-template-rows: 1fr 1fr 4fr;
     align-self: left;
     margin: 10px 0;
     padding: 10px;
     width: 400px;
     background: white;
     border: 8px outset #82ECFF;
+    border-top-left-radius: 50px;
     box-shadow: 0 0 10px rgba(22, 21, 21, 0.952); 
     
 }
@@ -90,7 +92,7 @@ div.intro {
 h1#name {
     grid-area: 1 / 1 / 1 / 2;
     color: rgb(179, 102, 179);
-    margin: 0;
+    margin: auto;
     font-family: 'Ubuntu Condensed', sans-serif;
     align-self: center;
 }
@@ -107,26 +109,30 @@ h2#dev {
     left: 50px;
     width: 130px;
     height: 80px;
-    background-image: url("images/lines-small.jpg");
+    background-image: url("images/lines-vector-3.svg");
     background-attachment: fixed;
-    background-position: center;
-    border: 5px inset #CBE00D;
+    border: 5px solid #CBE00D;
+    border-top-right-radius: 30%;
+    border-bottom-left-radius: 80%;
+    box-shadow: inset 0 0 10px rgba(22, 21, 21, 0.952); 
 }
 
 p#bio {
     grid-area: 3 / 1 / 3 / 3;
+    text-align: center;
 }
 
 #projects-head {
-    grid-area: 5 / 3 / 8 / 4;
+    grid-area: 5 / 4 / 8 / 4;
     margin: auto;
-    width: 300px;
+    width: 280px;
     font-family: 'Nova Mono', monospace;
     text-decoration: underline;
     font-size: 30px;
     background: #FFF;
     border: 8px outset #CBE00D;
     box-shadow: 0 0 10px rgba(22, 21, 21, 0.952); 
+    border-top-right-radius: 20px;
 }
 
 #projects-head h2 {
@@ -134,16 +140,15 @@ p#bio {
     margin: 0;
 }
 
-div.project {
+div.projects {
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 20% 80%;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(20, 5%);
     grid-gap: 8px;
     margin-top: 10px;
 }
 
-.project-title{
-    grid-area: 1 / 1 / 2 / 2;
+.project-title {
     padding: 10px;
     margin: auto;
     font-family: 'Nova Mono', monospace;
@@ -152,23 +157,28 @@ div.project {
     background: #FFF;
     border: 8px outset #FF5A3E;
     box-shadow: 0 0 10px rgba(22, 21, 21, 0.952); 
+    z-index: 2;
 }
 
-.vm .project-title {
-    grid-area: 1 / 2 / 2 / 3;
+.tropple.detail-link {
+    grid-area: 1 / 1 / 3 / 4;
+    margin: auto;
+    z-index: 2;
 }
+
+a .project-title:hover {
+    color:  #FF5A3E;
+    border-style: inset;
+}
+
 
 .project-title:hover {
     border-style: inset;
 }
 
-.detail-link {
-    grid-area: 1/ 1 / 2 / 2;
-    margin: auto;
-}
+
 
 .project-img {
-    grid-area: 2 / 1 / 3 / 2;
     margin: auto;
     padding: 10px;
     width: 300px;
@@ -181,14 +191,77 @@ div.project {
     border-style: inset;
 }
 
-.img-link {
-    grid-area: 2 / 1 / 3 / 2;
-    margin: auto;
+.img-link.tropple {
+    grid-area: 2 / 2 / 7 / 6;
+    
 }
 
-.vm .project-img {
-    grid-area: 2 / 2 / 3 / 2;
+tropple.detail-link {
+    transform: rotateZ(-5deg);
 }
+
+.tropple.title-wrapper {
+    grid-area: 1 / 1 / 4 / 4;
+    margin: auto;
+    transform: rotateZ(-5deg);
+    border-bottom-right-radius: 10%;
+}
+
+.tropple.project-title {
+    font-size: 28px;
+    transform: rotateZ(-5px);
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 40px;
+}
+
+.tropple.project-img {
+    grid-area: 2 / 2 / 7 / 6;
+}
+
+
+.vm.title-wrapper {
+    grid-area: 4 / 7 / 6 / 11;
+    margin: auto;
+    transform: rotateZ(5deg);
+    border-bottom-right-radius: 10%;
+}
+
+
+.vm.project-title {
+    grid-area: 4 / 7 / 6 / 11;
+    font-size: 28px;
+    transform: rotateZ(5deg);
+    border-style: outset;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 50px;
+}
+
+.vm.project-img {
+    grid-area: 5 / 6 / 9 / 11;
+}
+
+.np.title-wrapper {
+    grid-area: 7 / 1 / 10 / 5;
+    font-size: 24px;
+    margin: auto;
+    transform: rotateZ(-10deg);
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 40px;
+}
+
+.np.project-title {
+    grid-area: 7 / 1 / 10 / 5;
+    font-size: 24px;
+    transform: rotateZ(-10deg);
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 40px;
+}
+
+.np.project-img {
+    grid-area: 8 / 2 / 12 / 6;
+}
+
+
 
 p.project-text {
     grid-area: 1 / 2 / 3 / 2;
@@ -201,9 +274,6 @@ p.project-text {
     box-shadow: 0 0 10px rgba(22, 21, 21, 0.952); 
 }
 
-.vm p.project-text {
-    grid-area: 1 / 1 / 3 / 2;
-}
 #icon {
     padding-left: 3px;
     padding-top: 3px;
@@ -215,10 +285,10 @@ p.project-text {
 
 
 p {
-    font-family: 'Nova Mono', monospace;
+    font-family: 'Fira Mono', monospace;
     position: relative;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 700;
     max-width: 400px;
     align-self: center;
 }
@@ -227,27 +297,53 @@ p {
 
 /* TROPPLE */
 
-img#tropple-big {
+img.big {
     align-self: center;
     width: 600px;
     border: 8px inset rgb(179, 102, 179);
     box-shadow: 0 0 10px rgba(22, 21, 21, 0.952); 
+    z-index: 2;
 }
 
 div.detail-top {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr 1fr;
-    perspective: 2px;
 }
 
+div#home {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    position: sticky;
+    top: 200px;
+    width: 100px;
+    height: 45px;
+    right: 150px;
+    font-family: 'Nova Mono', monospace;
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    background-color: white;
+    border: 8px outset #CBE00D;
+    transform: rotateZ(-5deg);
+}
+
+#home:hover {
+    border-style: inset;
+    text-decoration: underline;
+}
+
+#home a {
+    text-decoration: none;
+}
 
 main.detail #projects-head {
-    grid-area: 2 / 2 / 3 / 3;
+    grid-area: 2 / 2 / 3 / 5;
     border-color: #FF5A3E;
     border-style: outset;
     box-shadow: 0 0 10px rgba(22, 21, 21, 0.952);
-
+    z-index: -2;
 }
 
 div.window {
@@ -257,20 +353,21 @@ div.window {
 }
 
 div#notes-1.window {
-    width: 900px;
+    width: 820px;
     height: 1100px;
     top: 20%;
     left: 50%; 
-    margin-left: -460px;
+    margin-left: -410px;
     position: absolute;
     background-image: url("images/tropple-notes-big.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    border: 10px  #82ECFF;
     z-index: -2;
-    border-style: ridge;
+    border-style: none;
     box-shadow: inset 0 0 10px rgba(22, 21, 21, 0.952);
+    border-top-left-radius: 10px;
+    border-radius: 20px;
 }
 
 
@@ -332,4 +429,73 @@ div#notes-4.window {
 
 #p3 {
     grid-area: 3 / 1 / 3 / 2;
+}
+
+/* Vending Machine */
+
+img.vm.big {
+    height: 400px;
+    width: auto;
+}
+
+main.vm #projects-head {
+    font-size: 28px;
+    width: 400px;
+}
+
+.vm.window#notes-2 {
+    background-image: url("images/vm-screen.png");
+}
+
+.vm.window#notes-3 {
+    max-height: 200px;
+    background-image: url("images/vm-sold-out.png");
+}
+
+.vm.window#notes-4 {
+    background-image: url("images/vm-end-transaction.png");
+}
+
+.vm.window#notes-1 {
+    background-image: url("images/oop-notes-big.jpg");
+    width: 760px;
+    height: 1100px;
+    top: 20%;
+    left: 50%; 
+    margin-left: -380px;
+}
+
+/* National Parks */
+
+img.np.big {
+    height: 350px;
+    width: auto;
+}
+
+main.np #projects-head {
+    font-size: 28px;
+    width: 400px;
+}
+
+.np.window#notes-2 {
+    background-image: url("images/np-search.png");
+}
+
+.np.window#notes-3 {
+    max-height: 170px;
+    background-image: url("images/np-query.png");
+}
+
+.np.window#notes-4 {
+    background-image: url("images/np-betty-books.png");
+    height: 150px;
+}
+
+.np.window#notes-1 {
+    background-image: url("images/notes-normalization.jpg");
+    width: 750px;
+    height: 950px;
+    top: 20%;
+    left: 50%; 
+    margin-left: -375px;
 }
