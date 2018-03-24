@@ -17,8 +17,7 @@ html {
     width: 784px;
     border: 8px outset #b366b3;
     z-index: -2;
-    box-shadow: 0 0 10px rgba(22, 21, 21, 0.952); 
-
+    box-shadow: 0 0 20px rgba(22, 21, 21, 0.952); 
 }
 
 #head {
@@ -390,7 +389,7 @@ div.project-detail p{
 div#notes-2.window {
     width: 330px;
     margin: auto;
-    background-image: url("images/tropple-perspective.jpg");
+    background-image: url("images/tropple-perspective-2.png");
     background-size: 100%;
     border: 8px outset #CBE00D;
     z-index: 1;
@@ -399,9 +398,9 @@ div#notes-2.window {
 
 div#notes-3.window {
     width: 330px;
-    height: 250px;
+    height: 220px;
     margin: auto;
-    background-image: url("images/tropple-end-turn.jpg");
+    background-image: url("images/tropple-dealt-damage.png");
     background-size: 100%;
     border: 8px outset #CBE00D;
     z-index: 1;
@@ -410,9 +409,9 @@ div#notes-3.window {
 
 div#notes-4.window {
     width: 330px;
-    height: 250px;
+    height: 180px;
     margin: auto;
-    background-image: url("images/tropple-code-2.jpg");
+    background-image: url("images/tropple-code-2.png");
     background-size: 100%;
     border: 8px outset #CBE00D;
     z-index: 1;
