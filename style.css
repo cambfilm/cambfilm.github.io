@@ -15,9 +15,10 @@ html {
 #steve {
     align-self: center;
     width: 784px;
-    border: 8px outset #b366b3;
+    border: 10px outset #b366b3;
     z-index: -2;
     box-shadow: 0 0 20px rgba(22, 21, 21, 0.952); 
+    border-bottom-right-radius: 80px;
 }
 
 #head {
@@ -26,6 +27,24 @@ html {
     max-width: 800px;
 }
 
+.chars {
+    color: white;
+    font-size: 280px;
+    font-weight: bolder;
+    z-index: -2;
+}
+
+.chars.open-brace {
+    grid-area: 1 / 1 / 11 / 2;
+}
+
+.chars.close-brace {
+    grid-area: 1 / 9 / 11 / 11;
+}
+
+.chars.semi-colon {
+    float: right;
+}
 
 #info {
     grid-area: 1 / 8 / 11 / 11;
@@ -39,6 +58,7 @@ html {
     background: #FFF;
     box-shadow: 0 0 10px rgba(22, 21, 21, 0.952); 
     transform: rotateZ(5deg);
+    z-index: 0;
 }
 
 #info:hover {
@@ -73,7 +93,7 @@ div.top {
 }
 
 div.intro {
-    grid-area: 1 / 2 / 5 / 4;
+    grid-area: 1 / 3 / 5 / 8;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 1fr 1fr 4fr;
@@ -85,6 +105,7 @@ div.intro {
     border: 8px outset #82ECFF;
     border-top-left-radius: 50px;
     box-shadow: 0 0 10px rgba(22, 21, 21, 0.952); 
+    z-index: 1;
     
 }
 
