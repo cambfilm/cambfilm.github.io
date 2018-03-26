@@ -12,19 +12,19 @@ html {
     background-size: cover;
 }
 
-#steve {
+img#steve {
     align-self: center;
-    width: 784px;
-    border: 10px outset #b366b3;
-    z-index: -2;
+    width: 50rem;
+    height: 30rem;
+    z-index: 1;
+    border: 8px outset #242424;
     box-shadow: 0 0 20px rgba(22, 21, 21, 0.952); 
-    border-bottom-right-radius: 80px;
 }
+
 
 #head {
     display: flex;
     align-self: center;
-    max-width: 800px;
 }
 
 .chars {
@@ -39,38 +39,41 @@ html {
 }
 
 .chars.close-brace {
-    grid-area: 1 / 9 / 11 / 11;
+    float: right;
 }
 
 .chars.semi-colon {
-    float: right;
+    float: right; 
 }
 
-#info {
-    grid-area: 1 / 8 / 11 / 11;
-    position: sticky;
-    margin-top: 10px;
-    top: 300px;
-    float: right;
-    height: 60px;
-    width: 205px;
-    border: 8px outset #CBE00D;
-    background: #FFF;
-    box-shadow: 0 0 10px rgba(22, 21, 21, 0.952); 
-    transform: rotateZ(5deg);
-    z-index: 0;
-}
-
-#info:hover {
-    border-style: inset;
-}
 
 a {
     height: inherit;
     color: black;
 }
 
+img.link {
+    width: 60px;
+    margin: 15px;
+    padding: 3px;
+    border-radius: 50%;
+    background-color: #FFF;
+    box-shadow: 0 0 10px #000;
 
+}
+
+a#linked img.link {
+    border-radius: 10px;
+}
+
+a#mail img.link {
+    border-radius: 95%;
+}
+
+div.media-links {
+    grid-area: 2 / 9 / 5 / 10;
+    width: 110px;
+}
 
 .link {
     align-self: center;
@@ -111,7 +114,7 @@ div.intro {
 
 h1#name {
     grid-area: 1 / 1 / 1 / 2;
-    color: rgb(179, 102, 179);
+    color: #b366b3;
     margin: auto;
     font-family: 'Ubuntu Condensed', sans-serif;
     align-self: center;
@@ -125,9 +128,9 @@ h2#dev {
 }
 #shape {
     grid-area: 1 / 2 / 3 / 3;
+    width: 130px;
     position: relative;
     left: 50px;
-    width: 130px;
     height: 80px;
     background-image: url("images/lines-vector-3.svg");
     background-attachment: fixed;
@@ -240,7 +243,7 @@ tropple.detail-link {
 
 
 .vm.title-wrapper {
-    grid-area: 4 / 7 / 6 / 11;
+    grid-area: 5 / 7 / 6 / 11;
     margin: auto;
     transform: rotateZ(5deg);
     border-bottom-right-radius: 10%;
@@ -248,7 +251,7 @@ tropple.detail-link {
 
 
 .vm.project-title {
-    grid-area: 4 / 7 / 6 / 11;
+    grid-area: 5 / 7 / 6 / 11;
     font-size: 28px;
     transform: rotateZ(5deg);
     border-style: outset;
@@ -261,18 +264,18 @@ tropple.detail-link {
 }
 
 .np.title-wrapper {
-    grid-area: 7 / 1 / 10 / 5;
+    grid-area: 7 / 1 / 9 / 5;
     font-size: 24px;
     margin: auto;
-    transform: rotateZ(-10deg);
+    transform: rotateZ(-5deg);
     border-bottom-right-radius: 20px;
     border-top-left-radius: 40px;
 }
 
 .np.project-title {
-    grid-area: 7 / 1 / 10 / 5;
+    grid-area: 5 / 1 / 7 / 5;
     font-size: 24px;
-    transform: rotateZ(-10deg);
+    transform: rotateZ(-5deg);
     border-bottom-right-radius: 20px;
     border-top-left-radius: 40px;
 }
@@ -282,26 +285,22 @@ tropple.detail-link {
 }
 
 
-
-p.project-text {
-    grid-area: 1 / 2 / 3 / 2;
-    align-self: center;
-    justify-self: center;
-    margin: 0;
-    padding: 10px;
-    background: #FFF;
-    border: 8px outset rgb(179, 102, 179);
-    box-shadow: 0 0 10px rgba(22, 21, 21, 0.952); 
+.ar.title-wrapper {
+    grid-area: 9 / 7 / 12 / 11;
+    margin: auto;
 }
 
-#icon {
-    padding-left: 3px;
-    padding-top: 3px;
-    font-family: 'Limelight', cursive;
-    color: rgb(122, 93, 122);
-    align-self: flex-start;
+.ar.project-title {
+    font-size: 26px;
+    padding: 12px;
+    transform: rotateZ(7deg);
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 50px;
 }
 
+.ar.project-img {
+    grid-area: 10 / 6 / 15 / 11;
+}
 
 
 p {
@@ -313,14 +312,23 @@ p {
     align-self: center;
 }
 
+#head {
+    position: relative;
+}
 
+#git.info.detail {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
 
 /* TROPPLE */
 
 img.big {
     align-self: center;
     width: 600px;
-    border: 8px inset rgb(179, 102, 179);
+    border: 8px outset #242424;
     box-shadow: 0 0 10px rgba(22, 21, 21, 0.952); 
     z-index: 2;
 }
@@ -332,9 +340,8 @@ div.detail-top {
 }
 
 div#home {
-    grid-row-start: 1;
+    grid-row-start: 2;
     grid-column-start: 1;
-    position: sticky;
     top: 200px;
     width: 100px;
     height: 45px;
@@ -346,6 +353,7 @@ div#home {
     text-align: center;
     background-color: white;
     border: 8px outset #CBE00D;
+    border-radius: 100%;
     transform: rotateZ(-5deg);
 }
 
@@ -367,8 +375,6 @@ main.detail #projects-head {
 }
 
 div.window {
-    width: 300px;
-    height: 200px;
     border-style: outset;
 }
 
@@ -403,16 +409,18 @@ div.project-detail p{
     padding: 10px;
     font-size: 15px;
     background: #FFF;
-    border: 8px outset rgb(179, 102, 179);
+    border: 8px outset #82ECFF;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(22, 21, 21, 0.952);
 }
 
 div#notes-2.window {
     width: 330px;
+    height: 220px;
     margin: auto;
     background-image: url("images/tropple-perspective-2.png");
     background-size: 100%;
-    border: 8px outset #CBE00D;
+    border: 8px outset #242424;
     z-index: 1;
     box-shadow: 0 0 10px rgba(22, 21, 21, 0.952);
 }
@@ -423,7 +431,7 @@ div#notes-3.window {
     margin: auto;
     background-image: url("images/tropple-dealt-damage.png");
     background-size: 100%;
-    border: 8px outset #CBE00D;
+    border: 8px outset #242424;
     z-index: 1;
     box-shadow: 0 0 10px rgba(22, 21, 21, 0.952);
 }
@@ -434,7 +442,7 @@ div#notes-4.window {
     margin: auto;
     background-image: url("images/tropple-code-2.png");
     background-size: 100%;
-    border: 8px outset #CBE00D;
+    border: 8px outset #242424;
     z-index: 1;
     box-shadow: 0 0 10px rgba(22, 21, 21, 0.952);
 }
@@ -465,6 +473,7 @@ main.vm #projects-head {
 
 .vm.window#notes-2 {
     background-image: url("images/vm-screen.png");
+
 }
 
 .vm.window#notes-3 {
@@ -477,7 +486,7 @@ main.vm #projects-head {
 }
 
 .vm.window#notes-1 {
-    background-image: url("images/oop-notes-big.jpg");
+    background-image: url("images/oop-notes-big-2.jpg");
     width: 760px;
     height: 1100px;
     top: 20%;
@@ -512,6 +521,35 @@ main.np #projects-head {
 }
 
 .np.window#notes-1 {
+    background-image: url("images/notes-normalization.jpg");
+    width: 750px;
+    height: 950px;
+    top: 20%;
+    left: 50%; 
+    margin-left: -375px;
+}
+
+
+/* Film AR */
+
+
+main.ar #projects-head {
+    font-size: 28px;
+    width: 400px;
+}
+
+.ar.window#notes-2 {
+    background-image: url("images/ar-red.jpg");
+    background-size: 100%;
+    height: 380px;
+}
+
+.ar.window#notes-3 {
+    height: 370px;
+    background-image: url("images/ar-green.jpg");
+}
+
+.ar.window#notes-1 {
     background-image: url("images/notes-normalization.jpg");
     width: 750px;
     height: 950px;
