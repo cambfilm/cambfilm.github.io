@@ -17,7 +17,7 @@ img#steve {
     width: 50rem;
     height: 30rem;
     z-index: 1;
-    border: 8px outset #242424;
+    border: 10px solid #000;
     box-shadow: 0 0 20px rgba(22, 21, 21, 0.952); 
 }
 
@@ -71,8 +71,9 @@ a#mail img.link {
 }
 
 div.media-links {
-    grid-area: 2 / 9 / 5 / 10;
-    width: 110px;
+    grid-area: 2 / 9 / 5 / 11;
+    margin-left: 30px;
+    width: 90px;
 }
 
 .link {
@@ -91,22 +92,22 @@ div.text {
 
 div.top {
     display: grid;
-    grid-template-columns: repeat(10, 10%);
-    grid-template-rows: repeat(8, 12.5%);
+    grid-template-columns: repeat(10, 1fr);
+
 }
 
 div.intro {
-    grid-area: 1 / 3 / 5 / 8;
+    grid-area: 1 / 3 / 3 / 8;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr 4fr;
     align-self: left;
     margin: 10px 0;
     padding: 10px;
-    width: 400px;
-    background: white;
-    border: 8px outset #82ECFF;
-    border-top-left-radius: 50px;
+    background-color: #FFF;
+    width: 450px;
+    border-radius: 10px;
+    border-bottom-right-radius: 160px;
     box-shadow: 0 0 10px rgba(22, 21, 21, 0.952); 
     z-index: 1;
     
@@ -114,39 +115,41 @@ div.intro {
 
 h1#name {
     grid-area: 1 / 1 / 1 / 2;
-    color: #b366b3;
+    color: #3E1929;
+    font-size: 36px;
+    text-align: center;
     margin: auto;
     font-family: 'Ubuntu Condensed', sans-serif;
     align-self: center;
 }
 
 h2#dev {
-    grid-area: 2 / 1 / 2 / 3;
+    grid-area: 2 / 1 / 2 / 2;
     margin: 0;
     align-self: top;
+    text-align: center;
     font-family: 'Fugaz One', cursive;
 }
 #shape {
     grid-area: 1 / 2 / 3 / 3;
     width: 130px;
     position: relative;
-    left: 50px;
     height: 80px;
     background-image: url("images/lines-vector-3.svg");
+    background-color: #FFF;
     background-attachment: fixed;
-    border: 5px solid #CBE00D;
+    border: 6px solid #CBE00D;
     border-top-right-radius: 30%;
     border-bottom-left-radius: 80%;
     box-shadow: inset 0 0 10px rgba(22, 21, 21, 0.952); 
 }
 
 p#bio {
-    grid-area: 3 / 1 / 3 / 3;
-    text-align: center;
+    grid-area: 3 / 1 / 3 / 4;
 }
 
 #projects-head {
-    grid-area: 5 / 4 / 8 / 4;
+    grid-area: 1 / 4 / 2 / 6;
     margin: auto;
     width: 280px;
     font-family: 'Nova Mono', monospace;
@@ -165,8 +168,8 @@ p#bio {
 
 div.projects {
     display: grid;
-    grid-template-columns: repeat(10, 10%);
-    grid-template-rows: repeat(20, 5%);
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
     grid-gap: 8px;
     margin-top: 10px;
 }
@@ -178,7 +181,7 @@ div.projects {
     text-decoration: underline;
     font-size: 30px;
     background: #FFF;
-    border: 8px outset #FF5A3E;
+    border: 7px solid #3E1929;
     box-shadow: 0 0 10px rgba(22, 21, 21, 0.952); 
     z-index: 2;
 }
@@ -189,117 +192,90 @@ div.projects {
     z-index: 2;
 }
 
-a .project-title:hover {
-    color:  #FF5A3E;
-    border-style: inset;
-}
 
 
 .project-title:hover {
-    border-style: inset;
+    box-shadow: 0 0 30px #3E1929;
 }
 
 
 
 .project-img {
-    margin: auto;
     padding: 10px;
     width: 300px;
     background: #FFF;
-    border: 8px outset #82ECFF;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(22, 21, 21, 0.952); 
 }
 
-.project-img:hover {
-    border-style: inset;
-}
-
-.img-link.tropple {
-    grid-area: 2 / 2 / 7 / 6;
-    
-}
-
-tropple.detail-link {
-    transform: rotateZ(-5deg);
-}
-
 .tropple.title-wrapper {
-    grid-area: 1 / 1 / 4 / 4;
+    grid-area: 1 / 1 / 3 / 3;
     margin: auto;
-    transform: rotateZ(-5deg);
-    border-bottom-right-radius: 10%;
+    z-index: 2;
 }
 
 .tropple.project-title {
     font-size: 28px;
     transform: rotateZ(-5px);
-    border-bottom-right-radius: 30px;
-    border-top-left-radius: 40px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 40px;
 }
 
 .tropple.project-img {
-    grid-area: 2 / 2 / 7 / 6;
+    grid-area: 2 / 1 / 4 / 5;
 }
 
 
 .vm.title-wrapper {
-    grid-area: 5 / 7 / 6 / 11;
+    grid-area: 2 / 6 / 4 / 11;
     margin: auto;
-    transform: rotateZ(5deg);
-    border-bottom-right-radius: 10%;
+    z-index: 2;
 }
 
 
 .vm.project-title {
-    grid-area: 5 / 7 / 6 / 11;
     font-size: 28px;
-    transform: rotateZ(5deg);
-    border-style: outset;
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 50px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 50px;
 }
 
 .vm.project-img {
-    grid-area: 5 / 6 / 9 / 11;
+    grid-area: 3 / 6 / 6 / 11;
 }
 
 .np.title-wrapper {
-    grid-area: 7 / 1 / 9 / 5;
+    grid-area: 4 / 1 / 6 / 5;
     font-size: 24px;
     margin: auto;
-    transform: rotateZ(-5deg);
-    border-bottom-right-radius: 20px;
-    border-top-left-radius: 40px;
+    z-index: 2;
 }
 
 .np.project-title {
-    grid-area: 5 / 1 / 7 / 5;
-    font-size: 24px;
-    transform: rotateZ(-5deg);
-    border-bottom-right-radius: 20px;
-    border-top-left-radius: 40px;
+    font-size: 28px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 40px;
 }
 
 .np.project-img {
-    grid-area: 8 / 2 / 12 / 6;
+    grid-area: 5 / 1 / 7 / 5;
 }
 
 
 .ar.title-wrapper {
-    grid-area: 9 / 7 / 12 / 11;
+    grid-area: 5 / 6 / 7 / 11;
     margin: auto;
+    z-index: 2;
 }
 
 .ar.project-title {
     font-size: 26px;
     padding: 12px;
-    transform: rotateZ(7deg);
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 50px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 50px;
 }
 
 .ar.project-img {
-    grid-area: 10 / 6 / 15 / 11;
+    grid-area: 6 / 6 / 10 / 11;
 }
 
 
@@ -328,38 +304,33 @@ p {
 img.big {
     align-self: center;
     width: 600px;
-    border: 8px outset #242424;
+    border: 8px solid #000;
     box-shadow: 0 0 10px rgba(22, 21, 21, 0.952); 
     z-index: 2;
 }
 
-div.detail-top {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr 1fr;
-}
 
 div#home {
-    grid-row-start: 2;
-    grid-column-start: 1;
-    top: 200px;
+    position: absolute;
+    left: -40px;
+    bottom: 0;
     width: 100px;
     height: 45px;
-    right: 150px;
     font-family: 'Nova Mono', monospace;
     font-size: 30px;
     font-weight: 700;
     text-decoration: none;
     text-align: center;
     background-color: white;
-    border: 8px outset #CBE00D;
-    border-radius: 100%;
-    transform: rotateZ(-5deg);
+    border: 8px solid #CBE00D;
+    box-shadow: 0 0 10px #000;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 30px;
+    z-index: 2;
 }
 
 #home:hover {
-    border-style: inset;
-    text-decoration: underline;
+    box-shadow: 0 0 10px #CBE00D;
 }
 
 #home a {
@@ -367,15 +338,17 @@ div#home {
 }
 
 main.detail #projects-head {
-    grid-area: 2 / 2 / 3 / 5;
-    border-color: #FF5A3E;
+    margin: 2rem;
+    border-color: #CBE00D;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 20px;
     border-style: outset;
     box-shadow: 0 0 10px rgba(22, 21, 21, 0.952);
     z-index: -2;
 }
 
 div.window {
-    border-style: outset;
+
 }
 
 div#notes-1.window {
@@ -389,9 +362,10 @@ div#notes-1.window {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
+    filter: blur(.1em);
     z-index: -2;
     border-style: none;
-    box-shadow: inset 0 0 10px rgba(22, 21, 21, 0.952);
+
     border-top-left-radius: 10px;
     border-radius: 20px;
 }
@@ -409,7 +383,6 @@ div.project-detail p{
     padding: 10px;
     font-size: 15px;
     background: #FFF;
-    border: 8px outset #82ECFF;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(22, 21, 21, 0.952);
 }
@@ -420,7 +393,6 @@ div#notes-2.window {
     margin: auto;
     background-image: url("images/tropple-perspective-2.png");
     background-size: 100%;
-    border: 8px outset #242424;
     z-index: 1;
     box-shadow: 0 0 10px rgba(22, 21, 21, 0.952);
 }
@@ -431,7 +403,6 @@ div#notes-3.window {
     margin: auto;
     background-image: url("images/tropple-dealt-damage.png");
     background-size: 100%;
-    border: 8px outset #242424;
     z-index: 1;
     box-shadow: 0 0 10px rgba(22, 21, 21, 0.952);
 }
@@ -442,7 +413,6 @@ div#notes-4.window {
     margin: auto;
     background-image: url("images/tropple-code-2.png");
     background-size: 100%;
-    border: 8px outset #242424;
     z-index: 1;
     box-shadow: 0 0 10px rgba(22, 21, 21, 0.952);
 }
@@ -556,4 +526,8 @@ main.ar #projects-head {
     top: 20%;
     left: 50%; 
     margin-left: -375px;
+}
+
+div.ar div.project-detail {
+    grid-template-rows: 1fr;
 }
